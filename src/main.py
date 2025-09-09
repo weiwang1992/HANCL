@@ -16,19 +16,19 @@ parser.add_argument('--lr', type=float, default=0.004, help='learning rate')
 parser.add_argument('--l2_weight', type=float, default=1e-4, help='weight of the l2 regularization term')  # movie-5
 parser.add_argument('--dim', type=int, default=64, help='dimension of entity and relation embeddings')
 
-parser.add_argument('--user_CF_set', type=int, default=256, help='the number of triples in triple set of user')
-parser.add_argument('--user_potential_triple_set_sampling_size', type=int, default=256, help='the number of triples in triple set of user potential set')
-parser.add_argument('--item_CF_set', type=int, default=256, help='the number of triples in triple set of item origin')
-parser.add_argument('--item_potential_triple_set_sampling_size', type=int, default=256, help='the number of triples in triple set of item')
+parser.add_argument('--user_CF_set', type=int, default=128, help='the number of triples in triple set of user')
+parser.add_argument('--user_potential_triple_set_sampling_size', type=int, default=128, help='the number of triples in triple set of user potential set')
+parser.add_argument('--item_CF_set', type=int, default=128, help='the number of triples in triple set of item origin')
+parser.add_argument('--item_potential_triple_set_sampling_size', type=int, default=128, help='the number of triples in triple set of item')
 
 parser.add_argument('--agg', type=str, default='concat', help='the type of aggregation function (sum, pool, concat)')
 
 parser.add_argument('--use_cuda', type=bool, default=True, help='whether using gpu or cpu')
-parser.add_argument('--show_topk', type=bool, default=True, help='whether showing topk or not')
+parser.add_argument('--show_topk', type=bool, default=False, help='whether showing topk or not')
 parser.add_argument('--random_flag', type=bool, default=False, help='whether using random seed or not')
 
-parser.add_argument("--emb_dropout", type=float, default=0.0, help="dropout")
-parser.add_argument("--att_dropout", type=float, default=0.0, help="dropout ")
+parser.add_argument("--emb_dropout", type=float, default=0.2, help="dropout")
+parser.add_argument("--att_dropout", type=float, default=0.3, help="dropout ")
 parser.add_argument("--gate_dropout", type=float, default=0.0, help="dropout")
 
 args = parser.parse_args()
